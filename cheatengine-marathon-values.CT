@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"dynamic_world address and tick count"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>["Classic Marathon Steam.exe"+EF6340]</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"level number from dynamic_world"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>2 Bytes</VariableType>
+      <Address>["Classic Marathon Steam.exe"+EF6340]+0x250</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
