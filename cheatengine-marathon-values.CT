@@ -5,7 +5,7 @@
       <ID>1</ID>
       <Description>"dynamic_world address and tick count"</Description>
       <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
+      <VariableType>8 Bytes</VariableType>
       <Address>["Classic Marathon Steam.exe"+EF6340]</Address>
     </CheatEntry>
     <CheatEntry>
@@ -14,6 +14,12 @@
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>2 Bytes</VariableType>
       <Address>["Classic Marathon Steam.exe"+EF6340]+0x250</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"1 = menu 2 = cutscene 8 = gameplay"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"Classic Marathon Steam.exe"+F10198</Address>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
