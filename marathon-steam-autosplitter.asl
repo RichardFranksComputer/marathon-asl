@@ -2,20 +2,17 @@
  * ==============================================================================
  * MARATHON (Classic Marathon Steam) - AUTO SPLITTER
  * ==============================================================================
+ * Version     : v0.2.0
  * Executable  : Classic Marathon Steam.exe
  * Memory model: static pointer at module+0xEF6340 → dynamic_world struct
  *                 dynamic_world+0x000 (int,   4 bytes) = tick count
  *                 dynamic_world+0x250 (short, 2 bytes) = level number
+ *                 module+0xF10198                 (int, 4 bytes) = screen state
  *
  * Timer start  : Map 0, tick transitions 0→1 (player begins new game)
- * Split        : Level number increments by 1 (transitions 0→1 through 25→26)
- * Final split  : Map 26, tick count stops incrementing for ≥30 consecutive frames
+ * Split        : Level number increases (transitions 0→1 through 25→26)
+ * Final split  : Screen state enters epilogue (state 4)
  * Reset        : Map 0, tick count transitions from any value >0 back to 0
- *
- * KNOWN LIMITATION: Final split uses tick-freeze detection (~0.5s threshold).
- * If the player pauses or the game loses window focus while on Map 26, the
- * freeze detector may fire prematurely. For competitive runs, manual timer
- * stop on Map 26 completion is recommended as a backup.
  *
  * Full run layout: 27 split points (26 map transitions + 1 final completion)
  * ==============================================================================
@@ -35,18 +32,20 @@ state("Classic Marathon Steam")
     // Current level number: dynamic_world offset 0x250.
     // Maps 0–26 represent a full run. Increments as the player progresses.
     short levelNumber     : 0x00EF6340, 0x250;
+
+    // Screen state: direct interface state value at module+0xF10198.
+    // 2 = chapter heading, 4 = epilogue, 8 = gameplay.
+    int   screenState     : 0x00F10198;
 }
 
 startup
 {
     print("[Marathon] ============================================================");
-    print("[Marathon] Auto-splitter loaded — Classic Marathon Steam");
-    print("[Marathon] 27 splits expected: map transitions 0→1…25→26 + Map 26 end");
+    print("[Marathon] Auto-splitter loaded — Classic Marathon Steam (v0.2.0)");
+    print("[Marathon] 27 splits expected: map transitions 0→1…25→26 + epilogue end");
     print("[Marathon] ============================================================");
 
     vars.frameCount    = 0;
-    vars.frozenFrames  = 0;
-    vars.lastKnownTick = 0;
     vars.ptrWasNull    = true;
     vars.runComplete   = false;
 }
@@ -56,8 +55,6 @@ init
     print("[Marathon] Game process attached — initializing state");
 
     vars.frameCount    = 0;
-    vars.frozenFrames  = 0;
-    vars.lastKnownTick = 0;
     vars.ptrWasNull    = true;
     vars.runComplete   = false;
 }
@@ -80,9 +77,7 @@ update
     else if (!ptrValid && !vars.ptrWasNull)
     {
         print("[Marathon] dynamic_world pointer is null — tick and map unavailable");
-        vars.ptrWasNull    = true;
-        vars.frozenFrames  = 0;
-        vars.lastKnownTick = 0;
+        vars.ptrWasNull  = true;
     }
 
     // If the pointer is invalid, halt processing — start/split/reset will not run
@@ -94,27 +89,12 @@ update
     // -------------------------------------------------------------------------
     if (vars.frameCount % 300 == 0)
     {
-        print(String.Format("[Marathon] Frame:{0} | Map:{1} | Tick:{2} | FrozenFrames:{3} | RunComplete:{4}",
+        print(String.Format("[Marathon] Frame:{0} | Map:{1} | Tick:{2} | ScreenState:{3} | RunComplete:{4}",
             vars.frameCount,
             current.levelNumber,
             current.tickCount,
-            vars.frozenFrames,
+            current.screenState,
             vars.runComplete));
-    }
-
-    // -------------------------------------------------------------------------
-    // Tick-freeze counter — used by the Map 26 final split detection.
-    // Counts consecutive frames where tickCount does not change.
-    // Resets to 0 whenever tick advances (normal gameplay).
-    // -------------------------------------------------------------------------
-    if (current.tickCount > 0 && current.tickCount == vars.lastKnownTick)
-    {
-        vars.frozenFrames++;
-    }
-    else
-    {
-        vars.frozenFrames  = 0;
-        vars.lastKnownTick = current.tickCount;
     }
 }
 
@@ -126,8 +106,6 @@ start
     if (current.levelNumber == 0 && old.tickCount == 0 && current.tickCount == 1)
     {
         print("[Marathon START] Map 0 | Tick 0→1 | Timer started");
-        vars.frozenFrames  = 0;
-        vars.lastKnownTick = current.tickCount;
         vars.runComplete   = false;
         return true;
     }
@@ -144,8 +122,6 @@ reset
     if (current.levelNumber == 0 && old.tickCount > 0 && current.tickCount == 0)
     {
         print(String.Format("[Marathon RESET] Map 0 | Tick {0}→0 | Timer reset", old.tickCount));
-        vars.frozenFrames  = 0;
-        vars.lastKnownTick = 0;
         vars.runComplete   = false;
         return true;
     }
@@ -157,39 +133,29 @@ split
 {
     // =========================================================================
     // SPLIT 1–26 — Map transitions
-    // Fires each time the level number increments by exactly 1.
-    // Covers: 0→1, 1→2, … 25→26  (26 splits)
+    // Fires each time the level number increases.
+    // Covers normal progression 0→1, 1→2, … 25→26.
     // =========================================================================
-    if (current.levelNumber == old.levelNumber + 1 &&
-        current.levelNumber >= 1 && current.levelNumber <= 26)
+    if (current.levelNumber > old.levelNumber)
     {
         print(String.Format("[Marathon SPLIT] Map {0}→{1} | Tick:{2}",
             old.levelNumber, current.levelNumber, current.tickCount));
-
-        // Reset freeze counter so it starts fresh on the new map
-        vars.frozenFrames  = 0;
-        vars.lastKnownTick = current.tickCount;
         return true;
     }
 
     // =========================================================================
-    // SPLIT 27 — Map 26 final completion
-    // Fires when tick count stops incrementing for 30 consecutive frames while
-    // on Map 26 with a non-zero tick (confirms active gameplay, not pre-start).
-    // runComplete flag prevents this from re-triggering after the split fires.
-    //
-    // LIMITATION: Will also trigger if the player pauses or alt-tabs on Map 26.
+    // SPLIT 27 — Final completion
+    // Fires when the interface enters epilogue (screen state 4).
+    // runComplete prevents this from re-triggering after the split fires.
     // =========================================================================
-    if (current.levelNumber == 26 &&
-        !vars.runComplete &&
-        current.tickCount > 0 &&
-        vars.frozenFrames >= 30)
+    if (current.screenState == 4 &&
+        old.screenState != 4 &&
+        !vars.runComplete)
     {
-        print(String.Format("[Marathon SPLIT] Map 26 complete | Tick frozen for {0} frames at tick:{1}",
-            vars.frozenFrames, current.tickCount));
+        print(String.Format("[Marathon SPLIT] Epilogue reached | Map:{0} | Tick:{1}",
+            current.levelNumber, current.tickCount));
 
-        vars.runComplete  = true;
-        vars.frozenFrames = 0;
+        vars.runComplete = true;
         return true;
     }
 
@@ -198,9 +164,6 @@ split
 
 isLoading
 {
-    // No dedicated loading state variable is available from the current memory map.
-    // The tick count naturally pauses at menus and on game unfocus, but the timer
-    // is only running during an active gameplay session (between start and final split),
-    // so real-time and in-game time are approximately equivalent for a clean run.
-    return false;
+    // Chapter heading screens use state 2 and should pause game time.
+    return current.screenState == 2;
 }

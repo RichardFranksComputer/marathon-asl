@@ -10,6 +10,8 @@ You MUST:
 - Reuse patterns, structure, and conventions from the provided .asl
 - Only modify logic relevant to Marathon
 - Not invent new structural patterns unless absolutely necessary
+- Add or update a version comment in the generated `.asl` file
+- Append a matching versioned change summary to the end of `README.md`
 
 ----------------------------------------
 CHEAT ENGINE MEMORY DEFINITIONS
@@ -33,6 +35,18 @@ Meaning:
 - Dereference the pointer at (module_base + 0xEF6340)
 - Then read a 2-byte value at offset 0x250
 
+Entry 3:
+Name: screen state
+Type: 4 Bytes
+Address: ["Classic Marathon Steam.exe"+F10198]
+
+Meaning:
+- This is a direct 4-byte value stored at module_base + 0xF10198
+- Known values:
+   - 2 = chapter heading
+   - 4 = epilogue
+   - 8 = gameplay
+
 ----------------------------------------
 ASL TRANSLATION RULES
 ----------------------------------------
@@ -51,6 +65,7 @@ Therefore:
 dynamicWorldPtr → int dynamicWorldPtr : 0x00EF6340
 tickCount       → int tickCount       : 0x00EF6340, 0x0
 levelNumber     → short levelNumber   : 0x00EF6340, 0x250
+screenState     → int screenState     : 0x00F10198
 
 ----------------------------------------
 GAME LOGIC
@@ -79,12 +94,14 @@ START:
 - Map == 0 AND tick == 1
 
 SPLIT:
-- When current map == old map + 1
+- When current map > old map
 
 END (FINAL SPLIT):
-- Occurs on map 26 when tick stops incrementing
-- Must avoid false triggers from pauses or focus loss
+- Occurs when screen state enters epilogue (screen state 4)
 - Must only trigger ONCE
+
+LOADING:
+- screen state == 2
 
 ----------------------------------------
 FAILURE HANDLING
@@ -125,9 +142,9 @@ Gameplay:
 - tick increments continuously
 - map increments → SPLIT fires each time
 
-Final map (26):
-- tick stops incrementing
-- after stable freeze → FINAL SPLIT fires once
+Final map / ending:
+- screen state changes to epilogue
+- FINAL SPLIT fires once
 
 ----------------------------------------
 OUTPUT REQUIREMENT
@@ -141,8 +158,10 @@ It must:
 - Compile and run on first try
 - Follow structure of the provided reference .asl
 - Contain: state, startup/init, update, start, split, reset blocks
-- Include necessary vars for state tracking (e.g. runComplete, freeze detection)
+- Include necessary vars for state tracking (e.g. runComplete)
 - Include minimal logging for unavailable memory
+- Include a version number in a header comment in the `.asl`
+- Be accompanied by a matching versioned changelog note appended to the end of `README.md`
 
 INSTRUCTIONS
 
@@ -160,13 +179,13 @@ INSTRUCTIONS
 3. Implement all timer logic EXACTLY as defined:
    - Reset (strict transition only)
    - Start (single-frame trigger)
-   - Split (map increments)
-   - Final split (tick freeze on map 26, only once)
+   - Split (map increases)
+   - Final split (epilogue screen state, only once)
 
-4. Implement freeze detection safely:
-   - Detect when tick stops changing across frames
-   - Use a frame counter threshold (~30 frames)
-   - Reset counter whenever tick changes
+4. Implement screen-state logic:
+   - Use `screenState == 2` for loading / chapter heading
+   - Use `screenState == 4` for the final split / epilogue
+   - Treat `screenState == 8` as gameplay
 
 5. Add state guards:
    - Prevent duplicate splits
@@ -182,6 +201,10 @@ INSTRUCTIONS
    - Ensure no race conditions
    - Ensure no false resets or splits
 
-8. Output ONLY the final .asl file
+8. Update version documentation:
+   - Add or bump the version number in the `.asl` header comment
+   - Append that version number and a short description of the changes to the end of `README.md`
+
+9. Output ONLY the final `.asl` file unless the task explicitly asks for documentation updates too
    - No explanations
    - No comments outside code unless necessary
