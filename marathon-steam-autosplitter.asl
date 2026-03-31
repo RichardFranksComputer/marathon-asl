@@ -136,7 +136,7 @@ split
     // Fires each time the level number increases.
     // Covers normal progression 0→1, 1→2, … 25→26.
     // =========================================================================
-    if (current.levelNumber > old.levelNumber)
+    if (current.levelNumber != old.levelNumber)
     {
         print(String.Format("[Marathon SPLIT] Map {0}→{1} | Tick:{2}",
             old.levelNumber, current.levelNumber, current.tickCount));
