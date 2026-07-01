@@ -39,9 +39,5 @@ enum { /* states. */
 |-------|-----------------|--------------------------------------------|
 | 1     | Menu            |                                            |
 | 2     | Chapter heading | Use as pause criteria: if value == 2, pause |
-| 4     | Ending?         | Unconfirmed — see below                    |
 | 8     | Gameplay        |                                            |
-
-## Notes
-
-- **Value 4 (ending):** Needs a tester to confirm — does the value flip to 4 at the exact moment the timer should stop?
+| 13    | Ending?         | 13 pops up momentarily on game end, unsure if stable | 

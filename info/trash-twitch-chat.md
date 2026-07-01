@@ -20,21 +20,12 @@
 6:46 TrashBoatAhoy: aha so now you're onto my thinking LUL no, ticks stay at 0 in the menu, and they start incrementing as soon as you enter the true level 0
 6:47 TrashBoatAhoy: funnily enough that's what i did in my python script to differentiate between the menu and the actual level
 6:49 TrashBoatAhoy: you might be interested actually in how i interacted with the livesplit server, so i'll send you my python script
-6:49 smoge7: welcome
-6:49 smoge7: i gotta immediately dip. gl hf
 6:49 TrashBoatAhoy: yeah so you start it in livesplit and it puts itself on port 16834
 6:49 TrashBoatAhoy: then you can pipe stuff to it on a socket
 6:49 TrashBoatAhoy: it's pretty easy
 Replying to @trashboatahoy: yeah so you start it in livesplit and it puts itself on port 168346:49 smoge7: i wanna use this for NDi
-6:51 hhosk10: idk if I told you, but my dad will be sueing the company for the accident, they said the hoist can hold 1100 pounds. The transmission was only 551 pounds and the leg bent and the trans fell forwards me
-6:51 hhosk10: towards*
 6:51 TrashBoatAhoy: uhhh it's a default python socket so i assume it's tcp
-6:53 hhosk10: I called him to tell him I’ll be In the hospital until Tuesday and he said “I’m sending the hoist back and shoving it up their ass” he isn’t really happy
 6:53 TrashBoatAhoy: fuck hosk you've really been through it recently, i'm glad you're alright
-6:54 hhosk10: fuck
-6:54 hhosk10: yeah I’m a bit numb on the finger tip
-6:54 hhosk10: no feel on the tip at all
-6:55 hhosk10: luckily blood is flowing
 6:56 TrashBoatAhoy: "i don't touch transmissions...not since the incident" *looks off into the distance*
 6:56 TrashBoatAhoy: uhh i'm not assuming that
 6:57 TrashBoatAhoy: we need to check to see if ticks reset to 0 when the last level finishes
