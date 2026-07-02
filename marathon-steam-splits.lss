@@ -1,179 +1,779 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Run version="1.7.0">
   <GameIcon />
   <GameName>Marathon (Classic Marathon Steam)</GameName>
   <CategoryName>Any%</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
   <Metadata>
     <Run id="" />
     <Platform usesEmulator="False">PC</Platform>
-    <Region />
+    <Region>
+    </Region>
     <Variables />
+    <CustomVariables />
   </Metadata>
   <Offset>00:00:00</Offset>
-  <AttemptCount>0</AttemptCount>
-  <AttemptHistory />
+  <AttemptCount>7</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="1" started="07/01/2026 21:01:31" isStartedSynced="True" ended="07/02/2026 00:04:55" isEndedSynced="True">
+      <RealTime>03:03:24.5790802</RealTime>
+      <GameTime>03:03:11.5069532</GameTime>
+    </Attempt>
+    <Attempt id="2" started="07/02/2026 00:25:49" isStartedSynced="False" ended="07/02/2026 00:25:56" isEndedSynced="False" />
+    <Attempt id="3" started="07/02/2026 00:25:56" isStartedSynced="False" ended="07/02/2026 00:26:06" isEndedSynced="False" />
+    <Attempt id="4" started="07/02/2026 00:26:06" isStartedSynced="False" ended="07/02/2026 00:26:32" isEndedSynced="True" />
+    <Attempt id="5" started="07/02/2026 00:26:32" isStartedSynced="True" ended="07/02/2026 00:28:34" isEndedSynced="True" />
+    <Attempt id="6" started="07/02/2026 00:28:34" isStartedSynced="True" ended="07/02/2026 00:29:54" isEndedSynced="True" />
+  </AttemptHistory>
   <Segments>
     <Segment>
       <Name>Level 1</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:00.4515186</RealTime>
+          <GameTime>00:00:00.4515186</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.4515186</RealTime>
+        <GameTime>00:00:00.4515186</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.4515186</RealTime>
+          <GameTime>00:00:00.4515186</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.4904628</RealTime>
+          <GameTime>00:00:00.4904628</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.4557917</RealTime>
+          <GameTime>00:00:00.4557917</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 2</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:00.4854127</RealTime>
+          <GameTime>00:00:00.4854127</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.0338941</RealTime>
+        <GameTime>00:00:00.0338941</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.0338941</RealTime>
+          <GameTime>00:00:00.0338941</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5091853</RealTime>
+          <GameTime>00:00:00.5091853</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5294562</RealTime>
+          <GameTime>00:00:00.5294562</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 3</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:00.9986962</RealTime>
+          <GameTime>00:00:00.9986962</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5132835</RealTime>
+        <GameTime>00:00:00.5132835</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5132835</RealTime>
+          <GameTime>00:00:00.5132835</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:05.6100564</RealTime>
+          <GameTime>00:00:00.5374594</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:03.0766879</RealTime>
+          <GameTime>00:00:00.5322674</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 4</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:04.0897625</RealTime>
+          <GameTime>00:00:01.5321655</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.4934004</RealTime>
+        <GameTime>00:00:00.4934004</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:03.0910663</RealTime>
+          <GameTime>00:00:00.5334693</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.4934004</RealTime>
+          <GameTime>00:00:00.4934004</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5151114</RealTime>
+          <GameTime>00:00:00.5151114</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 5</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:04.6089466</RealTime>
+          <GameTime>00:00:02.0513496</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5191841</RealTime>
+        <GameTime>00:00:00.5191841</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5191841</RealTime>
+          <GameTime>00:00:00.5191841</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5237451</RealTime>
+          <GameTime>00:00:00.5237451</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5387522</RealTime>
+          <GameTime>00:00:00.5387522</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 6</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:05.1310436</RealTime>
+          <GameTime>00:00:02.5734466</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5220970</RealTime>
+        <GameTime>00:00:00.5220970</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5220970</RealTime>
+          <GameTime>00:00:00.5220970</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5304030</RealTime>
+          <GameTime>00:00:00.5304030</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5299914</RealTime>
+          <GameTime>00:00:00.5299914</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 7</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:05.6608718</RealTime>
+          <GameTime>00:00:03.1032748</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5279047</RealTime>
+        <GameTime>00:00:00.5279047</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5298282</RealTime>
+          <GameTime>00:00:00.5298282</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5352931</RealTime>
+          <GameTime>00:00:00.5352931</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5279047</RealTime>
+          <GameTime>00:00:00.5279047</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 8</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:06.1884499</RealTime>
+          <GameTime>00:00:03.6308529</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.4997433</RealTime>
+        <GameTime>00:00:00.4997433</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5275781</RealTime>
+          <GameTime>00:00:00.5275781</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.4997433</RealTime>
+          <GameTime>00:00:00.4997433</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5434397</RealTime>
+          <GameTime>00:00:00.5434397</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 9</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:06.7159689</RealTime>
+          <GameTime>00:00:04.1583719</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5191328</RealTime>
+        <GameTime>00:00:00.5191328</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5275190</RealTime>
+          <GameTime>00:00:00.5275190</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5302690</RealTime>
+          <GameTime>00:00:00.5302690</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5191328</RealTime>
+          <GameTime>00:00:00.5191328</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 10</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:07.2602175</RealTime>
+          <GameTime>00:00:04.7026205</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5442486</RealTime>
+        <GameTime>00:00:00.5297918</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5442486</RealTime>
+          <GameTime>00:00:00.5442486</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:03.0603283</RealTime>
+          <GameTime>00:00:00.5297918</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:03.0997876</RealTime>
+          <GameTime>00:00:00.5601640</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 11</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:10.3278070</RealTime>
+          <GameTime>00:00:05.2128586</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5092401</RealTime>
+        <GameTime>00:00:00.5092401</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:03.0675895</RealTime>
+          <GameTime>00:00:00.5102381</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5298954</RealTime>
+          <GameTime>00:00:00.5298954</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5092401</RealTime>
+          <GameTime>00:00:00.5092401</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 12</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:10.8425840</RealTime>
+          <GameTime>00:00:05.7276356</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5147770</RealTime>
+        <GameTime>00:00:00.5147770</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5147770</RealTime>
+          <GameTime>00:00:00.5147770</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:03.1005261</RealTime>
+          <GameTime>00:00:00.5327154</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:03.0904044</RealTime>
+          <GameTime>00:00:00.5511910</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 13</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:13.9204587</RealTime>
+          <GameTime>00:00:06.2636557</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.4907831</RealTime>
+        <GameTime>00:00:00.4907831</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:03.0778747</RealTime>
+          <GameTime>00:00:00.5360201</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.4907831</RealTime>
+          <GameTime>00:00:00.4907831</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5231591</RealTime>
+          <GameTime>00:00:00.5231591</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 14</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:14.4345771</RealTime>
+          <GameTime>00:00:06.7777741</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5141184</RealTime>
+        <GameTime>00:00:00.5141184</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5141184</RealTime>
+          <GameTime>00:00:00.5141184</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5414941</RealTime>
+          <GameTime>00:00:00.5414941</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5276798</RealTime>
+          <GameTime>00:00:00.5276798</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 15</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:14.9651418</RealTime>
+          <GameTime>00:00:07.3083388</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5143040</RealTime>
+        <GameTime>00:00:00.5143040</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5305647</RealTime>
+          <GameTime>00:00:00.5305647</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5375926</RealTime>
+          <GameTime>00:00:00.5375926</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5143040</RealTime>
+          <GameTime>00:00:00.5143040</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 16</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:15.4968319</RealTime>
+          <GameTime>00:00:07.8400289</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5316901</RealTime>
+        <GameTime>00:00:00.5231574</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5316901</RealTime>
+          <GameTime>00:00:00.5316901</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:05.2092875</RealTime>
+          <GameTime>00:00:00.5272694</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:03.0834775</RealTime>
+          <GameTime>00:00:00.5231574</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 17</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:18.8829801</RealTime>
+          <GameTime>00:00:08.3679255</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5080632</RealTime>
+        <GameTime>00:00:00.5080632</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:03.3861482</RealTime>
+          <GameTime>00:00:00.5278966</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5080632</RealTime>
+          <GameTime>00:00:00.5080632</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5111033</RealTime>
+          <GameTime>00:00:00.5111033</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 18</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:19.3841099</RealTime>
+          <GameTime>00:00:08.8690553</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5011298</RealTime>
+        <GameTime>00:00:00.5011298</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5011298</RealTime>
+          <GameTime>00:00:00.5011298</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5325727</RealTime>
+          <GameTime>00:00:00.5325727</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5322640</RealTime>
+          <GameTime>00:00:00.5322640</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 19</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:19.9254791</RealTime>
+          <GameTime>00:00:09.4104245</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5301466</RealTime>
+        <GameTime>00:00:00.5301466</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5413692</RealTime>
+          <GameTime>00:00:00.5413692</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5301466</RealTime>
+          <GameTime>00:00:00.5301466</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5324674</RealTime>
+          <GameTime>00:00:00.5324674</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 20</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:20.4452556</RealTime>
+          <GameTime>00:00:09.9302010</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5197765</RealTime>
+        <GameTime>00:00:00.5197765</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5197765</RealTime>
+          <GameTime>00:00:00.5197765</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5212267</RealTime>
+          <GameTime>00:00:00.5212267</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5312707</RealTime>
+          <GameTime>00:00:00.5312707</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 21</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:20.9708788</RealTime>
+          <GameTime>00:00:10.4558242</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5256232</RealTime>
+        <GameTime>00:00:00.5256232</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5256232</RealTime>
+          <GameTime>00:00:00.5256232</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5292445</RealTime>
+          <GameTime>00:00:00.5292445</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5340051</RealTime>
+          <GameTime>00:00:00.5340051</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 22</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:21.4999886</RealTime>
+          <GameTime>00:00:10.9849340</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5098732</RealTime>
+        <GameTime>00:00:00.5098732</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5291098</RealTime>
+          <GameTime>00:00:00.5291098</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5292902</RealTime>
+          <GameTime>00:00:00.5292902</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5098732</RealTime>
+          <GameTime>00:00:00.5098732</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 23</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:22.0266836</RealTime>
+          <GameTime>00:00:11.5116290</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5266950</RealTime>
+        <GameTime>00:00:00.5266950</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5266950</RealTime>
+          <GameTime>00:00:00.5266950</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5292142</RealTime>
+          <GameTime>00:00:00.5292142</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5299601</RealTime>
+          <GameTime>00:00:00.5299601</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 24</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:22.5527179</RealTime>
+          <GameTime>00:00:12.0376633</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5260343</RealTime>
+        <GameTime>00:00:00.5205657</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5260343</RealTime>
+          <GameTime>00:00:00.5260343</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:03.0718249</RealTime>
+          <GameTime>00:00:00.5205657</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:03.0799940</RealTime>
+          <GameTime>00:00:00.5346884</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 25</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:00:25.6304266</RealTime>
+          <GameTime>00:00:12.5582996</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5143326</RealTime>
+        <GameTime>00:00:00.5143326</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:03.0777087</RealTime>
+          <GameTime>00:00:00.5206363</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5293076</RealTime>
+          <GameTime>00:00:00.5293076</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5143326</RealTime>
+          <GameTime>00:00:00.5143326</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Level 26</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>03:03:24.0515541</RealTime>
+          <GameTime>03:03:10.9794271</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5296106</RealTime>
+        <GameTime>00:00:00.5296106</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>03:02:58.4211275</RealTime>
+          <GameTime>03:02:58.4211275</GameTime>
+        </Time>
+        <Time id="5">
+          <RealTime>00:00:00.5296106</RealTime>
+          <GameTime>00:00:00.5296106</GameTime>
+        </Time>
+        <Time id="6">
+          <RealTime>00:00:00.5353375</RealTime>
+          <GameTime>00:00:00.5353375</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>Completion</Name>
-      <SplitTimes />
-      <BestSegmentTime />
-      <SegmentHistory />
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>03:03:24.5790802</RealTime>
+          <GameTime>03:03:11.5069532</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00.5275261</RealTime>
+        <GameTime>00:00:00.5275261</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:00:00.5275261</RealTime>
+          <GameTime>00:00:00.5275261</GameTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
   </Segments>
   <AutoSplitterSettings />
